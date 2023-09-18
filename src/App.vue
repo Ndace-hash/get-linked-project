@@ -1,12 +1,13 @@
-<script setup lang="ts">
-
-</script>
 
 <template>
-  <div>
-    hello
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <RouterView />
 </template>
 
-<style scoped></style>
+<script setup lang="ts">
+</script>
+
+<style>
+body {
+  @apply bg-secondary-major text-white font-montserrat;
+}
+</style>
