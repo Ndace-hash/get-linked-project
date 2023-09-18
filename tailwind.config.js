@@ -10,7 +10,8 @@ export default {
         "secondary-minor": "#D434FE",
       },
       fontFamily: {
-        "montserrat": ["Montserrat", "san-serif"]
+        "montserrat": ["Montserrat", "sans-serif"],
+        "clash-display": ["Clash Display", "sans-serif"]
       },
       fontSize: {
         "desktop-heading-1": '80px',
