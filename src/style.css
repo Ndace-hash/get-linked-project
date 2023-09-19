@@ -4,7 +4,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --primary-one: '#FE34B9';
+    --primary-two: "#903AFF";
+    --secondary-major: "#150E28";
+    --secondary-minor: "#D434FE";
+}
+
 @font-face {
     font-family: "Clash Display";
     src: url(./assets/fonts/ClashDisplay-Bold.otf);
+}
+@font-face {
+    font-family: "Unica One";
+    src: url(./assets/fonts/UnicaOne-Regular.ttf);
+}
+
+body {
+    background-image: radial-gradient(circle 159px at 20% 40%, #8f3aff54, #150E28);
+    background-repeat: no-repeat;
 }

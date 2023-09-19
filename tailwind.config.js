@@ -11,7 +11,8 @@ export default {
       },
       fontFamily: {
         "montserrat": ["Montserrat", "sans-serif"],
-        "clash-display": ["Clash Display", "sans-serif"]
+        "clash-display": ["Clash Display", "sans-serif"],
+        "unica-one": ["Unica One", "sans-serif"]
       },
       fontSize: {
         "desktop-heading-1": '80px',
