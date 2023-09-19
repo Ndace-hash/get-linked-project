@@ -4,14 +4,16 @@
         <AppHero />
         <AppIntro />
         <AppRules />
+        <AppKeyAttributes />
     </div>
 </template>
 
 <script setup>
-import AppHeader from '../components/AppHeader/index.vue'
-import AppHero from '../components/AppHero/index.vue'
-import AppIntro from '../components/AppIntro/index.vue'
+import AppHeader from '@components/AppHeader/index.vue'
+import AppHero from '@components/AppHero/index.vue'
+import AppIntro from '@components/AppIntro/index.vue'
 import AppRules from '@components/AppRules/index.vue'
+import AppKeyAttributes from '@components/AppKeyAttributes/index.vue'
 </script>
 
 <style lang="scss" scoped></style>
