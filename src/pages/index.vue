@@ -5,6 +5,7 @@
         <AppIntro />
         <AppRules />
         <AppKeyAttributes />
+        <AppFAQ />
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import AppHero from '@components/AppHero/index.vue'
 import AppIntro from '@components/AppIntro/index.vue'
 import AppRules from '@components/AppRules/index.vue'
 import AppKeyAttributes from '@components/AppKeyAttributes/index.vue'
+import AppFAQ from '@components/AppFAQ/index.vue'
 </script>
 
 <style lang="scss" scoped></style>
