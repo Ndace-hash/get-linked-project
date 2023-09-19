@@ -1,6 +1,6 @@
 <template>
     <section id="intro" class="flex flex-col py-8 items-center lg:flex-row lg:justify-center lg:px-20 lg:py-16">
-        <div class="flex items-center justify-center w-[80%] max-w-md lg:w-[50%] h-full">
+        <div class="flex items-center justify-center w-[80%] lg:w-[50%] h-full">
             <img src="@assets/images/analysis.svg" alt="An illustration of a lady reading" class="w-full h-full">
         </div>
         <div class="mt-2 px-6 lg:px-3 lg:w-[50%] flex flex-col items-center lg:items-start">
