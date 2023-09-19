@@ -28,7 +28,7 @@
                     class="bg-gradient-to-r from-primary-one to-primary-two capitalize mt-6 px-6 py-2 rounded-sm lg:px-8">
                     register
                 </RouterLink>
-                <div class="flex gap-5 mt-3 lg:mt-12">
+                <div class="flex gap-5 mt-3 lg:mt-6">
                     <p class="font-unica-one text-desktop-heading-2">00<span class="text-sm capitalize">h</span></p>
                     <p class="font-unica-one text-desktop-heading-2">00<span class="text-sm capitalize">m</span></p>
                     <p class="font-unica-one text-desktop-heading-2">00<span class="text-sm capitalize">s</span></p>
