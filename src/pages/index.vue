@@ -7,6 +7,7 @@
         <AppKeyAttributes />
         <AppFAQ />
         <AppTimeline />
+        <AppPrize />
     </div>
 </template>
 
@@ -18,6 +19,7 @@ import AppRules from '@components/AppRules/index.vue'
 import AppKeyAttributes from '@components/AppKeyAttributes/index.vue'
 import AppFAQ from '@components/AppFAQ/index.vue'
 import AppTimeline from '@components/AppTimeline/index.vue'
+import AppPrize from '@components/AppPrize/index.vue'
 </script>
 
 <style lang="scss" scoped></style>
