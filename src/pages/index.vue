@@ -10,6 +10,7 @@
         <AppPrize />
         <AppSponsors />
         <AppPrivacy />
+        <AppFooter />
     </div>
 </template>
 
@@ -24,6 +25,7 @@ import AppTimeline from '@components/AppTimeline/index.vue'
 import AppPrize from '@components/AppPrize/index.vue'
 import AppSponsors from '@components/AppSponsors/index.vue'
 import AppPrivacy from '@components/AppPrivacy/index.vue'
+import AppFooter from '@components/AppFooter/index.vue'
 </script>
 
 <style lang="scss" scoped></style>

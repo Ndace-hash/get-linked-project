@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        "footer":'#100B20',
         "primary-one": '#FE34B9',
         "primary-two": "#903AFF",
         "secondary-major": "#150E28",
