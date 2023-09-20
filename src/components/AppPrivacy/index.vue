@@ -1,5 +1,5 @@
 <template>
-    <section id="privacy" class="py-16 flex flex-col lg:flex-row">
+    <section id="privacy" class="py-16 flex flex-col lg:flex-row lg:px-16">
         <div class="flex flex-col items-center px-6 lg:w-4/5 lg:items-start">
             <h2
                 class="font-clash-display text-desktop-subtext lg:text-desktop-heading-2 text-center lg:text-left leading-tight mb-4">
