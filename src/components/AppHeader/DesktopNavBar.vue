@@ -5,11 +5,11 @@
             <img src="../../assets/get_linked.svg" alt="Get linked logo" class="w-full">
         </div>
         <nav class="flex gap-5 px-14 items-center">
-            <a href="#" class="capitalize text-desktop-paragraph font-medium">Timeline</a>
-            <a href="#" class="capitalize text-desktop-paragraph font-medium">Overview</a>
-            <a href="#" class="capitalize text-desktop-paragraph font-medium">FAQs</a>
-            <a href="#" class="capitalize text-desktop-paragraph font-medium">Contact</a>
-            <RouterLink to="/"
+            <a href="#timeline" class="capitalize text-desktop-paragraph font-medium">Timeline</a>
+            <a href="#intro" class="capitalize text-desktop-paragraph font-medium">Overview</a>
+            <a href="#FAQ" class="capitalize text-desktop-paragraph font-medium">FAQs</a>
+            <RouterLink to="/contact" class="capitalize text-desktop-paragraph font-medium">Contact</RouterLink>
+            <RouterLink to="/register"
                 class="capitalize text-desktop-paragraph bg-gradient-to-r from-primary-one to-primary-two font-medium text-center rounded-sm py-2 px-10 cursor-pointer">
                 Register</RouterLink>
         </nav>

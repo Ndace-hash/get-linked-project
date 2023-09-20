@@ -12,10 +12,10 @@
         <div
             :class="['absolute w-screen md:justify-center flex top-0 left-0 h-[600px] items-center bg-secondary-major z-50 ease-linear duration-300', showMenu ? 'translate-x-0 opacity-100 ' : 'translate-x-full opacity-50']">
             <nav class="flex flex-col gap-5 px-14 md:items-center">
-                <a href="#" class="capitalize text-desktop-subtext font-medium">Timeline</a>
-                <a href="#" class="capitalize text-desktop-subtext font-medium">Overview</a>
-                <a href="#" class="capitalize text-desktop-subtext font-medium">FAQs</a>
-                <a href="#" class="capitalize text-desktop-subtext font-medium">Contact</a>
+                <a href="#timeline" class="capitalize text-desktop-subtext font-medium">Timeline</a>
+                <a href="#intro" class="capitalize text-desktop-subtext font-medium">Overview</a>
+                <a href="#FAQ" class="capitalize text-desktop-subtext font-medium">FAQs</a>
+                <RouterLink to="/contact" class="capitalize text-desktop-subtext font-medium">Contact</RouterLink>
                 <RouterLink to="/"
                     class="capitalize text-desktop-subtext bg-gradient-to-r from-primary-one to-primary-two font-medium text-center rounded-md py-3 px-10 mt-4">
                     Register</RouterLink>
