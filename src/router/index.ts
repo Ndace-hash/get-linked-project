@@ -1,13 +1,20 @@
 import { createWebHistory, createRouter} from 'vue-router'
-import HomeView from '../pages/index.vue'
+import HomePage from '@/pages/index.vue'
+import RegisterPage from '@/pages/RegisterPage.vue'
 
 export default createRouter({
     history: createWebHistory(),
     routes:[{
         name: 'home',
         path: '/',
-        component: HomeView
-    }],
+        component: HomePage
+    },
+    {
+        name: 'register',
+        path: '/register',
+        component: RegisterPage
+    }
+],
 
 
 })
