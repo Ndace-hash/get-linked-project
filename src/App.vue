@@ -1,11 +1,14 @@
 
 <template>
   <div class="w-full overflow-x-hidden min-h-screen">
+    <AppHeader />
     <RouterView />
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
+import AppHeader from '@components/AppHeader/index.vue'
+
 </script>
 
 <style>
