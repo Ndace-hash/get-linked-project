@@ -9,6 +9,7 @@
         <AppTimeline />
         <AppPrize />
         <AppSponsors />
+        <AppPrivacy />
     </div>
 </template>
 
@@ -22,6 +23,7 @@ import AppFAQ from '@components/AppFAQ/index.vue'
 import AppTimeline from '@components/AppTimeline/index.vue'
 import AppPrize from '@components/AppPrize/index.vue'
 import AppSponsors from '@components/AppSponsors/index.vue'
+import AppPrivacy from '@components/AppPrivacy/index.vue'
 </script>
 
 <style lang="scss" scoped></style>
