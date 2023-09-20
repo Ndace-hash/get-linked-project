@@ -2,7 +2,7 @@
     <header
         class="hidden lg:flex justify-between items-center border-b border-white border-opacity-20 px-16 h-[90px] pt-8 pb-2">
         <div class="overflow-hidden w-[150px]">
-            <img src="../../assets/get_linked.svg" alt="Get linked logo" class="w-full">
+            <img src="@assets/get_linked.svg" alt="Get linked logo" class="w-full">
         </div>
         <nav class="flex gap-5 px-14 items-center">
             <a href="#timeline" class="capitalize text-desktop-paragraph font-medium">Timeline</a>

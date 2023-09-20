@@ -2,7 +2,7 @@
     <header
         class="flex items-center justify-between h-[100px] border-b border-white border-opacity-20 pt-4 px-[50px] lg:hidden  w-full relative">
         <div class="overflow-hidden w-[100px]">
-            <img src="../../assets/get_linked.svg" alt="Get linked logo" class="w-full">
+            <img src="@assets/get_linked.svg" alt="Get linked logo" class="w-full">
         </div>
         <button class="flex flex-col w-[30px] gap-1" @click="() => showMenu = true">
             <span class="h-[4px] bg-white block w-1/2 shrink-0 self-start rounded-sm"></span>

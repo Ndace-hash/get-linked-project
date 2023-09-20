@@ -1,7 +1,7 @@
 <template>
     <section id="intro" class="flex flex-col py-8 items-center lg:flex-row lg:justify-center lg:px-20 lg:py-16">
         <div class="flex items-center justify-center w-[80%] max-w-md lg:w-[40%]">
-            <img src="../../assets/images/The_big_idea.png" alt="Lightbulb with ideas" class="w-full">
+            <img src="@assets/images/The_big_idea.png" alt="Lightbulb with ideas" class="w-full">
         </div>
         <div class="mt-8 px-6 lg:w-[60%]">
             <h2 class="font-clash-display text-center text-desktop-subtext lg:text-left lg:text-desktop-heading-2 w-full">
