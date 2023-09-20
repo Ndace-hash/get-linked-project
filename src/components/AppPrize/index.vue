@@ -1,6 +1,6 @@
 <template>
-    <section id="rewards flex flex-col items-center py-6">
-        <div class="translate-x-full lg:mb-12 w-1/2">
+    <section id="rewards " class="flex flex-col items-center py-6">
+        <div class="lg:self-end lg:mb-12 w-1/2">
             <h2 class="font-clash-display text-desktop-subtext text-center leading-tight lg:text-left">Prizes and
                 <br /><span class="text-secondary-minor">Rewards</span>
             </h2>
