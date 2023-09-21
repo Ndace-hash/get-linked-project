@@ -75,7 +75,7 @@
 
                 </div>
                 <button
-                    :class="['bg-gradient-to-r from-primary-one to-primary-two w-max self-center py-4 px-16 rounded-md capitalize w-[200px]', successfullySent ? 'opacity-80' : 'opacity-100']"
+                    :class="['bg-gradient-to-r from-primary-one to-primary-two self-center py-4 px-16 rounded-md capitalize w-[200px]', successfullySent ? 'opacity-80' : 'opacity-100']"
                     :disabled="successfullySent" type="submit">{{ successfullySent ? 'Sent' : 'Submit' }}</button>
             </form>
             <div class="flex flex-col items-center gap-2 mt-6 lg:hidden">
