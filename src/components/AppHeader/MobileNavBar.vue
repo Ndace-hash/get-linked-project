@@ -21,7 +21,7 @@
         <a href="#FAQ" class="capitalize text-desktop-subtext font-medium" @click="() => (showMenu = false)">FAQs</a>
         <RouterLink to="/contact" class="capitalize text-desktop-subtext font-medium" @click="() => (showMenu = false)">
           Contact</RouterLink>
-        <RouterLink to="/"
+        <RouterLink to="/register"
           class="capitalize text-desktop-subtext bg-gradient-to-r from-primary-one to-primary-two font-medium text-center rounded-md py-3 px-10 mt-4"
           @click="() => (showMenu = false)">
           Register</RouterLink>
