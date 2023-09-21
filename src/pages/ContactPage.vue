@@ -35,29 +35,48 @@
             </h2>
             <p class="my-6 w-[80%] text-desktop-heading-3 lg:hidden">Email us below to any question related
                 to our event</p>
-            <form class="flex flex-col gap-8 py-4">
+            <form class="flex flex-col gap-8 py-4" @submit.prevent="submitMessage">
                 <div>
-                    <label for="team-name" class="sr-only">Team's name</label>
-                    <input type="text" name="team-name" id="team-name" placeholder="Team's Name"
+                    <label for="first-name" class="sr-only">First name</label>
+                    <input type="text" name="first-name" id="first-name" placeholder="First Name"
+                        v-model="formData.first_name"
                         class="border border-white bg-white bg-opacity-[3%] text-white placeholder:text-white py-3 px-4 rounded-md text-lg shadow-md w-full">
+                    <p v-for="e in v$.first_name.$errors" class="text-sm text-primary-one" v-if="v$.first_name.$error">{{
+                        e.$message
+                    }}</p>
+
                 </div>
                 <div>
-                    <label for="topic" class="sr-only">Topic</label>
-                    <input type="text" name="topic" id="topic" placeholder="Topic"
+                    <label for="phone" class="sr-only">phone</label>
+                    <input type="text" name="phone" id="phone" placeholder="Phone Number" v-model="formData.phone_number"
                         class="border border-white bg-white bg-opacity-[3%] text-white placeholder:text-white py-3 px-4 rounded-md text-lg shadow-md w-full">
+                    <p v-for="e in v$.phone_number.$errors" class="text-sm text-primary-one" v-if="v$.phone_number.$error">
+                        {{
+                            e.$message
+                        }}</p>
+
                 </div>
                 <div>
                     <label for="email" class="sr-only">Email</label>
-                    <input type="email" name="Email" id="email" placeholder="Email"
+                    <input type="email" name="Email" id="email" placeholder="Email" v-model="formData.email"
                         class="border border-white bg-white bg-opacity-[3%] text-white placeholder:text-white py-3 px-4 rounded-md text-lg shadow-md w-full">
+                    <p v-for="e in v$.email.$errors" class="text-sm text-primary-one" v-if="v$.email.$error">{{
+                        e.$message
+                    }}</p>
+
                 </div>
                 <div>
                     <label for="message" class="sr-only">message</label>
-                    <textarea name="message" id="message" placeholder="Message"
+                    <textarea name="message" id="message" placeholder="Message" v-model="formData.message"
                         class="border border-white bg-white bg-opacity-[3%] text-white placeholder:text-white py-3 px-4 rounded-md text-lg shadow-md w-full h-[200px] lg:h-[150px]"></textarea>
+                    <p v-for="e in v$.message.$errors" class="text-sm text-primary-one" v-if="v$.message.$error">{{
+                        e.$message
+                    }}</p>
+
                 </div>
                 <button
-                    class="bg-gradient-to-r from-primary-one to-primary-two w-max self-center py-4 px-16 rounded-md capitalize">Submit</button>
+                    :class="['bg-gradient-to-r from-primary-one to-primary-two w-max self-center py-4 px-16 rounded-md capitalize w-[200px]', successfullySent ? 'opacity-80' : 'opacity-100']"
+                    :disabled="successfullySent" type="submit">{{ successfullySent ? 'Sent' : 'Submit' }}</button>
             </form>
             <div class="flex flex-col items-center gap-2 mt-6 lg:hidden">
                 <p class="text-secondary-minor">Share on</p>
@@ -72,8 +91,42 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Chevron from '@components/icons/Chevron.vue'
+import { reactive, ref } from 'vue'
+import { useVuelidate } from '@vuelidate/core'
+import { required, email } from '@vuelidate/validators'
+import Axios from '@/utils/axios'
+
+const successfullySent = ref(false)
+const formData = reactive({
+    phone_number: '',
+    first_name: '',
+    email: '',
+    message: ''
+})
+const vuelidateRules = {
+    phone_number: { required },
+    first_name: { required },
+    email: { required, email },
+    message: { required }
+}
+const v$ = useVuelidate(vuelidateRules, formData)
+
+const submitMessage = async () => {
+    const validated = await v$.value.$validate()
+    if (validated) {
+        const { status } = await Axios.post('/hackathon/contact-form', formData)
+        if (status === 201) successfullySent.value = true
+        formData.email = ''
+        formData.first_name = ''
+        formData.phone_number = ''
+        formData.message = ''
+        v$.value.$reset()
+        setTimeout(() => { successfullySent.value = false }, 2000)
+
+    }
+}
 </script>
 
 <style lang="scss" scoped></style>
