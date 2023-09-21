@@ -175,6 +175,13 @@ const submitRegistrationForm = async () => {
     if (validated && formData.privacy_policy_accepted == true) {
         const response = await Axios.post('/hackathon/registration', formData)
         if ((await response).status === 201) succesfullRegistration.value = true
+        formData.team_name = ''
+        formData.email = ''
+        formData.phone_number = ''
+        formData.project_topic = ''
+        formData.category = ''
+        formData.group_size = ''
+        formData.privacy_policy_accepted = false
         isLoading.value = false
     } else {
         console.log(v$.value.$errors)
