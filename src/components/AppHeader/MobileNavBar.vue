@@ -1,9 +1,9 @@
 <template>
   <header
     :class="[' flex items-center justify-between h-[100px] border-b border-opacity-20 pt-4 px-[50px] lg:hidden w-full relative', $route.name != 'home' ? 'border-transparent hidden' : 'border-white']">
-    <div class="overflow-hidden w-[100px]">
+    <RouterLink to="/" class="overflow-hidden w-[100px]">
       <img src="@assets/get_linked.svg" alt="Get linked logo" class="w-full" />
-    </div>
+    </RouterLink>
     <button class="flex flex-col w-[30px] gap-1" @click="() => (showMenu = true)">
       <span class="h-[4px] bg-white block w-1/2 shrink-0 self-start rounded-sm"></span>
       <span class="h-[4px] bg-white block w-full shrink-0 rounded-sm"></span>
