@@ -22,45 +22,43 @@
                     <div class="flex flex-col gap-2">
                         <label for="team-name" class="capitalize">team's name</label>
                         <input type="text" name="team-name" id="team-name" placeholder="Enter the name of your group"
+                            v-model="formData.team_name" required
                             class="bg-transparent border-2 border-white placeholder:text-white placeholder:opacity-25 py-4 px-4 text-desktop-heading-3 rounded-md">
                     </div>
                     <div class="flex flex-col gap-2">
                         <label for="phone" class="capitalize">phone</label>
                         <input type="text" name="phone" id="phone" placeholder="Enter your phone number"
+                            v-model="formData.phone_number" required
                             class="bg-transparent border-2 border-white placeholder:text-white placeholder:opacity-25 py-4 px-4 text-desktop-heading-3 rounded-md">
                     </div>
                     <div class="flex flex-col gap-2">
                         <label for="email" class="capitalize">email</label>
                         <input type="email" name="email" id="email" placeholder="Enter your email address"
+                            v-model="formData.email" required
                             class="bg-transparent border-2 border-white placeholder:text-white placeholder:opacity-25 py-4 px-4 text-desktop-heading-3 rounded-md">
                     </div>
                     <div class="flex flex-col gap-2">
                         <label for="project-topic" class="capitalize">project topic</label>
-                        <input type="text" name="project-topic" id="project-topic"
-                            placeholder="What is your group project topic"
+                        <input type="text" name="project-topic" id="project-topic" required
+                            placeholder="What is your group project topic" v-model="formData.project_topic"
                             class="bg-transparent border-2 border-white placeholder:text-white placeholder:opacity-25 py-4 px-4 text-desktop-heading-3 rounded-md">
                     </div>
                     <div class="flex gap-2 lg:gap-4 w-full col-span-2">
                         <div class="flex flex-col gap-2">
                             <label for="category" class="capitalize">category</label>
-                            <select id="category"
+                            <select id="category" v-model="formData.category" required
                                 class="bg-transparent border-2 border-white placeholder:text-white placeholder:opacity-25 py-4 px-4 text-desktop-heading-3 rounded-md text-sm">
                                 <option value="" selected disabled>Select your category</option>
-                                <option value="Frontend" class="text-white bg-secondary-major">Frontend</option>
-                                <option value="Frontend" class="text-white bg-secondary-major">Frontend</option>
-                                <option value="Frontend" class="text-white bg-secondary-major">Frontend</option>
-                                <option value="Frontend" class="text-white bg-secondary-major">Frontend</option>
+                                <option :value="category.id" class="text-white bg-secondary-major"
+                                    v-for="category in categories">{{ category.name }}</option>
                             </select>
                         </div>
                         <div class="flex flex-col gap-2 md:grow">
                             <label for="group-size" class="capitalize">group size</label>
-                            <select id="group-size"
+                            <select id="group-size" v-model="formData.group_size" required
                                 class=" bg-transparent border-2 border-white placeholder:text-white placeholder:opacity-25 py-4 px-4 text-desktop-heading-3 rounded-md w-full text-sm">
                                 <option value="" selected disabled class=" opacity-50">Select</option>
-                                <option value="Frontend" class="text-white bg-secondary-major ">1</option>
-                                <option value="Frontend" class="text-white bg-secondary-major ">2 - 5</option>
-                                <option value="Frontend" class="text-white bg-secondary-major ">6 - 8
-                                </option>
+                                <option :value="n" class="text-white bg-secondary-major " v-for="n in 10">{{ n }}</option>
                             </select>
                         </div>
                     </div>
@@ -70,12 +68,14 @@
                     submitting
                 </p>
                 <div class="flex items-start gap-2">
-                    <input type="checkbox" name="policy" id="policy" class="border border-white bg-transparent">
+                    <input type="checkbox" name="policy" id="policy" class="border border-white bg-transparent"
+                        v-model="formData.privacy_policy_accepted">
                     <label for="policy">I agreed with the event terms and conditions and privacy policy</label>
                 </div>
 
                 <button
-                    class="bg-gradient-to-r from-primary-one to-primary-two py-4 px-10 text-desktop-heading-3 capitalize rounded-md w-max self-center lg:w-full">Register
+                    class="bg-gradient-to-r from-primary-one to-primary-two py-4 px-10 text-desktop-heading-3 capitalize rounded-md w-max self-center lg:w-full"
+                    @click.prevent="submitRegistrationForm">Register
                     Now</button>
             </form>
         </div>
@@ -96,8 +96,43 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import Axios from '@/utils/axios'
+import { reactive, onMounted, ref } from 'vue';
 
+interface CategoryObj {
+    id: number;
+    name: string;
+}
+interface FormDataObj {
+    team_name: string;
+    email: string;
+    phone_number: string;
+    project_topic: string;
+    category: string | number;
+    group_size: string | number;
+    privacy_policy_accepted: boolean
+}
+const categories = ref<CategoryObj[]>([])
+const formData = reactive<FormDataObj>({
+    team_name: '',
+    email: '',
+    phone_number: '',
+    project_topic: '',
+    category: '',
+    group_size: '',
+    privacy_policy_accepted: false
+})
+onMounted(async () => {
+    const reponse = await Axios.get('/hackathon/categories-list')
+    const data = await reponse.data
+    data.forEach((d: CategoryObj) => categories.value.push(d))
+})
+
+const submitRegistrationForm = async () => {
+    const response = await Axios.post('/hackathon/registration', formData)
+    console.log(response)
+}
 </script>
 
 <style lang="scss" scoped></style>
