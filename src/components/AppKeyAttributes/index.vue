@@ -1,37 +1,20 @@
 <template>
-  <section
-    id="intro"
-    class="flex flex-col py-8 items-center lg:flex-row lg:justify-center lg:px-20 lg:py-16"
-  >
+  <section id="intro"
+    class="flex flex-col py-8 items-center lg:flex-row lg:justify-center lg:px-20 lg:py-16 border-b border-b-white border-opacity-20">
     <div class="flex items-center justify-center w-[80%] lg:w-[50%] h-full">
-      <img
-        src="@assets/images/analysis.svg"
-        alt="An illustration of a lady reading"
-        class="w-full h-full"
-      />
+      <img src="@assets/images/analysis.svg" alt="An illustration of a lady reading" class="w-full h-full" />
     </div>
-    <div
-      class="mt-2 px-6 lg:px-3 lg:w-[50%] flex flex-col items-center lg:items-start"
-    >
-      <h2
-        class="font-clash-display text-center text-desktop-subtext lg:text-left lg:text-desktop-heading-2 w-full"
-      >
+    <div class="mt-2 px-6 lg:px-3 lg:w-[50%] flex flex-col items-center lg:items-start">
+      <h2 class="font-clash-display text-center text-desktop-subtext lg:text-left lg:text-desktop-heading-2 w-full">
         Judging criteria
         <br /><span class="text-secondary-minor">Key attributes</span>
       </h2>
-      <p
-        class="w-[90%] mx-auto text-center px-1 mt-3 lg:text-left lg:mx-0 text-desktop-paragraph mb-4 lg:w-full"
-        v-for="(a, index) in attributes"
-        :key="index"
-      >
-        <span class="text-primary-one font-bold text-[16px]"
-          >{{ a.attribute }}:</span
-        >
+      <p class="w-[90%] mx-auto text-center px-1 mt-3 lg:text-left lg:mx-0 text-desktop-paragraph mb-4 lg:w-full"
+        v-for="(a, index) in attributes" :key="index">
+        <span class="text-primary-one font-bold text-[16px]">{{ a.attribute }}:</span>
         {{ a.text }}
       </p>
-      <button
-        class="bg-gradient-to-r from-primary-one to-primary-two py-2 px-6 rounded-sm mt-4 w-max"
-      >
+      <button class="bg-gradient-to-r from-primary-one to-primary-two py-2 px-6 rounded-sm mt-4 w-max">
         Read More
       </button>
     </div>
