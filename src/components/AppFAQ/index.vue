@@ -15,7 +15,7 @@
                 <div class="flex border-b-2 border-b-secondary-minor py-2 items-center gap-2 w-full justify-between pe-2"
                     v-for="(question, index) in questions" :key="index">
                     <p>{{ question.question }}</p>
-                    <span>+</span>
+                    <Plus class="text-xl" />
                 </div>
             </div>
         </div>
@@ -32,6 +32,7 @@
 </template>
 
 <script setup>
+import Plus from '@components/icons/Plus.vue'
 const questions = [
     {
         question: 'Can I work on a project I started before the hackathon?',
