@@ -121,7 +121,7 @@
             <img src="@assets/images/wink_emoji_woman.svg" /></span>
         </p>
         <button class="bg-gradient-to-r from-primary-one to-primary-two w-full py-3 rounded-md mt-6"
-          @click="() => (succesfullRegistration = false)">
+          @click="closeCongratulation">
           Back
         </button>
       </div>
@@ -132,6 +132,7 @@
 <script setup lang="ts">
 import Axios from "@/utils/axios";
 import { reactive, onMounted, ref } from "vue";
+import { useRouter } from 'vue-router'
 import { required, email } from "@vuelidate/validators";
 import { useVuelidate } from "@vuelidate/core";
 
@@ -148,10 +149,11 @@ interface FormDataObj {
   group_size: string | number;
   privacy_policy_accepted: boolean;
 }
-
+const router = useRouter()
 const categories = ref<CategoryObj[]>([]);
 const succesfullRegistration = ref(false);
 const isLoading = ref(false);
+
 const formData = reactive<FormDataObj>({
   team_name: "",
   email: "",
@@ -161,6 +163,7 @@ const formData = reactive<FormDataObj>({
   group_size: "",
   privacy_policy_accepted: false,
 });
+
 const vuelidateRules = {
   team_name: { required },
   email: { required, email },
@@ -170,13 +173,19 @@ const vuelidateRules = {
   group_size: { required },
   privacy_policy_accepted: { required },
 };
+
 const v$ = useVuelidate(vuelidateRules, formData);
+
 onMounted(async () => {
   const reponse = await Axios.get("/hackathon/categories-list");
   const data = await reponse.data;
   data.forEach((d: CategoryObj) => categories.value.push(d));
 });
 
+const closeCongratulation = () => {
+  succesfullRegistration.value = false
+  router.push({ name: 'home' })
+}
 const submitRegistrationForm = async () => {
   const validated = await v$.value.$validate();
   setTimeout(() => {
