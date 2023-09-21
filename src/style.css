@@ -1,26 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
-    --primary-one: '#FE34B9';
-    --primary-two: "#903AFF";
-    --secondary-major: "#150E28";
-    --secondary-minor: "#D434FE";
+:root {
+  --primary-one: "#FE34B9";
+  --primary-two: "#903AFF";
+  --secondary-major: "#150E28";
+  --secondary-minor: "#D434FE";
 }
 
 @font-face {
-    font-family: "Clash Display";
-    src: url(./assets/fonts/ClashDisplay-Bold.otf);
+  font-family: "Clash Display";
+  src: url(./assets/fonts/ClashDisplay-Bold.otf);
 }
 @font-face {
-    font-family: "Unica One";
-    src: url(./assets/fonts/UnicaOne-Regular.ttf);
+  font-family: "Unica One";
+  src: url(./assets/fonts/UnicaOne-Regular.ttf);
 }
 
 body {
-    background-image: radial-gradient(circle 159px at 20% 40%, #8f3aff54, #150E28);
-    background-repeat: no-repeat;
+  background-image: radial-gradient(
+    circle closest-side at 20% 40%,
+    #d634fe3d,
+    #150e28 250px
+  );
+  background-repeat: no-repeat;
 }

@@ -1,4 +1,3 @@
-
 <template>
   <div class="w-full overflow-x-hidden min-h-screen">
     <AppHeader />
@@ -7,8 +6,7 @@
 </template>
 
 <script setup>
-import AppHeader from '@components/AppHeader/index.vue'
-
+import AppHeader from "@components/AppHeader/index.vue";
 </script>
 
 <style>

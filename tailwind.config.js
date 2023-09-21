@@ -1,30 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html","./src/**/*.{vue,js,jsx,ts,tsx}"],
+  content: ["./index.html", "./src/**/*.{vue,js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        "footer":'#100B20',
-        "primary-one": '#FE34B9',
+        footer: "#100B20",
+        "primary-one": "#FE34B9",
         "primary-two": "#903AFF",
         "secondary-major": "#150E28",
         "secondary-minor": "#D434FE",
       },
       fontFamily: {
-        "montserrat": ["Montserrat", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
         "clash-display": ["Clash Display", "sans-serif"],
-        "unica-one": ["Unica One", "sans-serif"]
+        "unica-one": ["Unica One", "sans-serif"],
       },
       fontSize: {
-        "desktop-heading-1": '80px',
-        "desktop-heading-2": '32px',
+        "desktop-heading-1": "80px",
+        "desktop-heading-2": "32px",
         "desktop-heading-3": "16px",
         "desktop-paragraph": "14px",
         "desktop-subtext": "20px",
-        "mobile-paragraph": "13px"
+        "mobile-paragraph": "13px",
       },
     },
   },
   plugins: [],
-}
-
+};
