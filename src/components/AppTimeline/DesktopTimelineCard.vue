@@ -1,41 +1,33 @@
 <template>
-  <article
-    :class="[
-      'flex justify-center items-center gap-x-40 relative before:absolute  before:top-0 before:w-[3px] before:bg-secondary-minor py-6 px-12 mt-0 w-full',
-      isLast ? 'before:h-1/2' : 'before:h-full',
-      isEven == 0 ? 'flex-row-reverse' : 'flex-row',
-    ]"
-  >
+  <article :class="[
+    'flex justify-center items-center gap-x-40 relative before:absolute  before:top-0 before:w-[3px] before:bg-secondary-minor py-6 px-12 mt-0 w-full',
+    isLast ? 'before:h-1/2' : 'before:h-full',
+    isEven == 0 ? 'flex-row' : 'flex-row-reverse',
+  ]">
     <div class="w-1/2 flex flex-col justify-center gap-2">
-      <h3
-        :class="[
-          ' text-secondary-minor font-bold',
-          isEven == 0 ? 'text-left' : 'text-right',
-        ]"
-      >
+      <h3 :class="[
+        ' text-secondary-minor font-bold',
+        isEven == 0 ? 'text-right' : 'text-left',
+      ]">
         {{ activity.activity }}
       </h3>
-      <p :class="[' text-[14px]', isEven == 0 ? 'text-left' : 'text-right']">
+      <p :class="[' text-[14px]', isEven == 0 ? 'text-right' : 'text-left']">
         {{ activity.description }}
       </p>
     </div>
     <div class="w-1/2 flex flex-col justify-center">
-      <p
-        :class="[
-          ' text-secondary-minor font-bold',
-          isEven == 0 ? 'text-right' : 'text-left',
-        ]"
-      >
+      <p :class="[
+        ' text-secondary-minor font-bold',
+        isEven == 0 ? 'text-left' : 'text-right',
+      ]">
         November 18, 2023
       </p>
     </div>
 
     <div
-      class="absolute w-[50px] h-[50px] flex items-center justify-center rounded-full overflow-hidden bg-secondary-major"
-    >
+      class="absolute w-[50px] h-[50px] flex items-center justify-center rounded-full overflow-hidden bg-secondary-major">
       <div
-        class="w-[30px] h-[30px] bg-gradient-to-r from-primary-one to-primary-two flex items-center justify-center rounded-full overflow-hidden"
-      >
+        class="w-[30px] h-[30px] bg-gradient-to-r from-primary-one to-primary-two flex items-center justify-center rounded-full overflow-hidden">
         <span class="font-bold">{{ index + 1 }}</span>
       </div>
     </div>
