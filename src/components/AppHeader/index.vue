@@ -1,6 +1,9 @@
 <template>
-  <MobileNavBar />
-  <DesktopNavBar />
+  <div class="sticky top-0">
+    <MobileNavBar />
+    <DesktopNavBar />
+
+  </div>
 </template>
 
 <script setup>
