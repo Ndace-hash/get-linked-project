@@ -1,7 +1,10 @@
 <template>
-  <footer class="bg-footer py-16 md:px-16">
-    <div class="flex gap-10 px-12 flex-col md:flex-row w-full">
-      <div class="w-full lg:w-1/3 me-6">
+  <footer class="bg-footer py-16 md:px-16 relative">
+    <div class="flex gap-10 px-12 flex-col md:flex-row w-full pb-4">
+      <div class="w-full lg:w-1/3 me-6 relative">
+        <img src="@assets/images/white_star.svg" alt="star"
+          class="absolute top-[30%] left-[-10%] w-[15px] lg:w-[20px] lg:top-[30%] lg:left-[-30%]">
+
         <div class="w-[150px]">
           <img src="@assets/get_linked.svg" alt="getlinked logo" class="w-full" />
         </div>
@@ -10,24 +13,27 @@
           established by a group of organizations with the aim of showcasing
           young and talented individuals in the field of technology
         </p>
-        <div class="mt-10">
+        <div class="mt-10 text-desktop-paragraph">
           <RouterLink to="/" class="pe-2 py-1 border-r border-r-secondary-minor capitalize">Terms of Use
           </RouterLink>
           <RouterLink to="/" class="ps-2 py-1 border-l border-l-secondary-minor capitalize">Privacy Policy
           </RouterLink>
         </div>
       </div>
-      <div class="w-1/3">
+      <div class="lg:w-1/3 relative">
+        <img src="@assets/images/gray_star.svg" alt="star"
+          class="absolute top-[40%] right-[40%] w-[20px] lg:w-[20px] lg:top-[10%] lg:right-[10%]">
+
         <h3 class="font-bold text-desktop-heading-3 text-secondary-minor capitalize">
           Useful Links
         </h3>
         <div class="flex flex-col gap-4 py-4">
-          <RouterLink to="/" class="capitalize">Overview</RouterLink>
-          <RouterLink to="/" class="capitalize">Timeline</RouterLink>
-          <RouterLink to="/" class="capitalize">FAQs</RouterLink>
+          <a href="#intro" class="capitalize">Overview</a>
+          <a href="#timeline" class="capitalize">Timeline</a>
+          <a href="#FAQ" class="capitalize">FAQs</a>
           <RouterLink to="/register" class="capitalize">Register</RouterLink>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4 lg:gap-2">
           <h4 class="text-secondary-minor">Follow us</h4>
           <div class="flex items-center  gap-4">
             <a href="#" class="w-[25px] flex items-center justify-center"><img src="@assets/images/instagram.svg"
@@ -41,7 +47,10 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="lg:w-1/3 relative">
+        <img src="@assets/images/white_star.svg" alt="star"
+          class="absolute top-[45%] right-[10%] w-[10px] lg:w-[20px] lg:top-[70%] lg:right-[-5%]">
+
         <h3 class="font-bold text-desktop-heading-3 text-secondary-minor capitalize">
           contact us
         </h3>
@@ -55,7 +64,10 @@
         </div>
       </div>
     </div>
-    <p class="w-full text-center mt-12">
+
+    <p class="w-full text-center mt-14 relative ">
+      <img src="@assets/images/purple_star.svg" alt="star"
+        class="absolute top-[-130%] left-[30%] w-[10px] lg:w-[20px] lg:top-[-200%] lg:left-[50%]">
       All rights reserved. &copy; getlinked Ltd.
     </p>
   </footer>
