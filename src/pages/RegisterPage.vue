@@ -1,10 +1,21 @@
 <template>
   <section class="min-h-full flex items-center">
-    <div class="hidden lg:flex">
+    <div class="hidden lg:flex relative">
+      <img src="@assets/images/purple_star.svg" alt="star" class="absolute lg:w-[16px] lg:top-[5%] lg:left-[15%]">
+      <img src="@assets/images/gray_star.svg" alt="star" class="absolute lg:w-[16px] lg:bottom-[5%] lg:left-[20%]">
+      <img src="@assets/images/purple_star.svg" alt="star" class="absolute lg:w-[16px] lg:bottom-[20%] lg:right-[15%]">
+
       <img src="@assets/images/man_sitting_at_table.svg"
         alt="An illustration of a man sitting at a table with crossed legs" />
     </div>
-    <div class="py-8 px-12 lg:bg-white lg:bg-opacity-5 lg:shadow-md md:mx-auto lg:scale-90 rounded-md">
+    <div class="py-8 px-12 lg:bg-white lg:bg-opacity-5 lg:shadow-md md:mx-auto lg:scale-90 rounded-md relative">
+      <img src="@assets/images/purple_star.svg" alt="star" class="absolute top-[20%] right-[15%] w-[15px] lg:hidden ">
+      <img src="@assets/images/gray_star.svg" alt="star"
+        class="absolute top-[40%] left-[5%] w-[15px] lg:w-[20px] lg:top-[4%] lg:left-[70%]">
+      <img src="@assets/images/purple_star.svg" alt="star" class="absolute bottom-[25%] right-[5%] w-[10px] lg:hidden">
+      <img src="@assets/images/white_star.svg" alt="star"
+        class="absolute hidden w-[10px] lg:flex lg:bottom-[-1%] lg:right-[10%]">
+
       <h2 class="text-secondary-minor font-bold font-clash-display text-desktop-subtext">
         Register
       </h2>
