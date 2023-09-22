@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="w-[500px] h-[500px]">
 
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 </script>
 
 <style scoped>
@@ -13,8 +13,6 @@ div {
             #150E28 70%);
     opacity: .9;
     background-repeat: no-repeat;
-    width: 500px;
-    height: 500px;
     z-index: -5;
 }
 </style>
