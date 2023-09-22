@@ -12,7 +12,7 @@
         :class="['capitalize text-desktop-paragraph font-medium', $route.name == 'contact' ? 'bg-gradient-to-l from-primary-one to-primary-two bg bg-clip-text text-transparent' : 'text-white']">
         Contact</RouterLink>
       <RouterLink to="/register"
-        :class="['capitalize text-desktop-paragraph  from-primary-one to-primary-two font-medium text-center rounded-sm p-[2px] w-[100px] h-[35px] cursor-pointer', $route.name == 'register' ? 'bg-gradient-to-t ' : 'bg-gradient-to-r']">
+        :class="['capitalize text-desktop-paragraph  from-primary-one to-primary-two font-medium text-center rounded-sm p-[2px] w-[100px] h-[35px] cursor-pointer ms-20', $route.name == 'register' ? 'bg-gradient-to-t ' : 'bg-gradient-to-r']">
         <div
           :class="['w-full h-full flex items-center justify-center', $route.name == 'register' ? 'bg-secondary-major' : 'bg-transparent']">
           Register
