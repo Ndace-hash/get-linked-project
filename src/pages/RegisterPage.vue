@@ -74,7 +74,7 @@
             </p>
           </div>
           <div class="flex gap-2 lg:gap-4 w-full col-span-2 items-center">
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 grow">
               <label for="category" class="capitalize">category</label>
               <select id="category" v-model="formData.category"
                 class="bg-transparent border-2 border-white placeholder:text-white placeholder:opacity-25 py-4 px-4 text-desktop-heading-3 rounded-md text-sm">
@@ -88,7 +88,7 @@
                 {{ e.$message }}
               </p>
             </div>
-            <div class="flex flex-col gap-2 md:w-1/2">
+            <div class="flex flex-col gap-2 md:w-1/2 grow">
               <label for="group-size" class="capitalize text-sm">group size</label>
               <select id="group-size" v-model="formData.group_size"
                 class="bg-transparent border-2 border-white placeholder:text-white placeholder:opacity-25 py-4 px-4 text-desktop-heading-3 rounded-md w-full text-sm">
