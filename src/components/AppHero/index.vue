@@ -6,8 +6,14 @@
       </h3>
       <img src="@assets/underline.svg" alt="pen underlining" class="absolute bottom-1 right-1" />
     </div>
-    <div class="flex flex-col items-center lg:flex-row relative w-full lg:ps-20 lg:mt-24">
-      <div class="flex flex-col items-center gap-2 lg:gap-4 lg:items-start">
+    <div class="flex flex-col items-center lg:items-start lg:flex-row relative w-full lg:ps-20 lg:mt-24">
+      <div class="flex flex-col items-center gap-2 lg:gap-4 lg:items-start relative">
+        <img src="@assets/images/white_star.svg" alt="star"
+          class="absolute -top-4 left-[30%] w-[15px] lg:w-[20px] lg:top-[-30%] lg:left-[10%]">
+        <img src="@assets/images/gray_star.svg" alt="star"
+          class="absolute -top-4 right-[15%] w-[10px] lg:w-[20px]  lg:right-[15%]">
+        <img src="@assets/images/gray_star.svg" alt="star"
+          class="absolute bottom-[30%] right-[30%] w-[10px] lg:w-[20px] lg:bottom-[15%] lg:right-[40%]">
         <div class="flex flex-col items-center lg:items-start">
           <div class="relative pt-6 w-max">
             <h1 class="font-clash-display text-desktop-heading-2 leading-tight text-center lg:text-[48px]">
