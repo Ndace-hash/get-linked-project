@@ -20,20 +20,20 @@
       <img src="@assets/images/white_star.svg" alt="star"
         class="absolute hidden w-[10px] lg:flex lg:bottom-[-1%] lg:right-[10%]">
 
-      <h2 class="text-secondary-minor font-bold font-clash-display text-desktop-subtext">
+      <h2 class="text-secondary-minor font-bold font-clash-display text-desktop-subtext self-start">
         Register
       </h2>
       <div>
         <img src="@assets/images/man_sitting_at_table.svg"
           alt="An illustration of a man sitting at a table with crossed legs" class="mx-auto lg:hidden w-full max-w-sm" />
       </div>
-      <p class="flex gap-2 items-end text-desktop-paragraph">
+      <p class="flex gap-2 items-end text-desktop-paragraph self-start">
         Be part of this movement!<span
           class="flex items-end border-b-2 border-b-secondary-minor border-dashed w-[80px] justify-center"><img
             src="@assets/images/woman_walking.svg" alt="a woman walking" /><img src="@assets/images/man_walking.svg"
             alt="a man walking" /></span>
       </p>
-      <p class="uppercase text-desktop-subtext my-2">create your account</p>
+      <p class="uppercase text-desktop-subtext my-2 self-start">create your account</p>
       <form class="flex flex-col gap-4" @submit.prevent="submitRegistrationForm">
         <div class="flex flex-col my-6 gap-4 lg:grid lg:grid-cols-2">
           <div class="flex flex-col gap-2">
