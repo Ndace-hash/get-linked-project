@@ -1,21 +1,10 @@
 <template>
   <div class="flex flex-col lg:items-center mt-14 px-10">
-    <DesktopTimelineCard
-      v-for="(t, index) in timeline"
-      :key="index"
-      :activity="t"
-      :index="index"
-      :is-last="timeline.length - 1 == index ? true : false"
-      class="hidden lg:flex"
-    />
+    <DesktopTimelineCard v-for="(t, index) in timeline" :key="index" :activity="t" :index="index"
+      :is-last="timeline.length - 1 == index ? true : false" class="hidden lg:flex" />
 
-    <MobileTImelineCard
-      v-for="(t, index) in timeline"
-      :key="index"
-      :activity="t"
-      :index="index"
-      class="block lg:hidden"
-    />
+    <MobileTImelineCard v-for="(t, index) in timeline" :key="index" :activity="t" :index="index"
+      class="block lg:hidden" />
   </div>
 </template>
 
