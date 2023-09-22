@@ -1,5 +1,8 @@
 <template>
-  <section class="min-h-full flex items-center">
+  <section class="min-h-full flex items-center relative px-12">
+    <AppRadialBackground class="absolute left-[-35%] top-[4%] lg:top-[10%] lg:left-[-10%]" />
+    <AppRadialBackground class="absolute hidden lg:flex lg:bottom-[-10%] lg:right-[-10%]" />
+
     <div class="hidden lg:flex relative">
       <img src="@assets/images/purple_star.svg" alt="star" class="absolute lg:w-[16px] lg:top-[5%] lg:left-[15%]">
       <img src="@assets/images/gray_star.svg" alt="star" class="absolute lg:w-[16px] lg:bottom-[5%] lg:left-[20%]">
@@ -152,6 +155,7 @@ import { useRouter } from 'vue-router'
 import { required, email } from "@vuelidate/validators";
 import { useVuelidate } from "@vuelidate/core";
 import Check from "@/components/icons/Check.vue";
+import AppRadialBackground from '@components/AppRadialBackground/index.vue'
 
 interface CategoryObj {
   id: number;
