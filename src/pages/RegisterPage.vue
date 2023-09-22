@@ -12,7 +12,7 @@
         alt="An illustration of a man sitting at a table with crossed legs" />
     </div>
     <div
-      class="py-8 px-6 lg:px-12 lg:bg-white lg:bg-opacity-5 lg:shadow-md md:mx-auto lg:scale-90 rounded-md relative  flex flex-col items-center">
+      class="py-8 px-6 lg:px-12 lg:bg-white lg:bg-opacity-5 lg:shadow-md mx-auto lg:scale-90 rounded-md relative  flex flex-col items-center">
       <img src="@assets/images/purple_star.svg" alt="star" class="absolute top-[20%] right-[15%] w-[15px] lg:hidden ">
       <img src="@assets/images/gray_star.svg" alt="star"
         class="absolute top-[40%] left-[5%] w-[15px] lg:w-[20px] lg:top-[4%] lg:left-[70%]">
