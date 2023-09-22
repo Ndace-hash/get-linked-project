@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full  mx-auto relative">
+  <div class="w-full  mx-auto relative mt-[100px] lg:mt-[90px]">
     <AppRadialBackground class="absolute left-[-40%] top-[-1%] scale-90 lg:scale-100 lg:left-[7%] lg:top-[-1.5%]" />
     <AppHero />
     <AppIntro />

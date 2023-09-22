@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-full flex items-center relative px-12">
+  <section class="min-h-full flex items-center relative px-12 mt-[100px] lg:mt-[90px]">
     <AppRadialBackground class="absolute left-[-35%] top-[4%] lg:top-[10%] lg:left-[-10%]" />
     <AppRadialBackground class="absolute hidden lg:flex lg:bottom-[-10%] lg:right-[-10%]" />
 

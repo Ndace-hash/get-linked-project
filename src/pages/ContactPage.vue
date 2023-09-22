@@ -1,5 +1,5 @@
 <template>
-  <section class="flex lg:ps-20 lg:pe-20 items-start justify-around gap-4 lg:py-16">
+  <section class="flex lg:ps-20 lg:pe-20 items-start justify-around gap-4 lg:py-16 mt-[100px] lg:mt-[90px]">
     <AppRadialBackground class="absolute left-[-35%] top-[4%] lg:top-[10%] lg:left-[-10%]" />
     <AppRadialBackground class="absolute hidden lg:flex lg:bottom-[0%] lg:right-[-10%]" />
 
