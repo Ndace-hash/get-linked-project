@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-7xl mx-auto">
+  <div class="w-full  mx-auto">
     <AppHero />
     <AppIntro />
     <AppRules />

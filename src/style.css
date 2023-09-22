@@ -20,3 +20,6 @@
   src: url(./assets/fonts/UnicaOne-Regular.ttf);
 }
 
+*::-webkit-scrollbar{
+  display: none;
+}

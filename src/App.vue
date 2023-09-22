@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full overflow-x-hidden min-h-screen max-w-7xl mx-auto">
+  <div class="w-full overflow-x-hidden min-h-screen max-w-screen-2xl mx-auto">
     <AppHeader />
     <RouterView />
   </div>
