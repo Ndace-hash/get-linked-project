@@ -20,11 +20,3 @@
   src: url(./assets/fonts/UnicaOne-Regular.ttf);
 }
 
-body {
-  background-image: radial-gradient(
-    circle closest-side at 20% 40%,
-    #d634fe3d,
-    #150e28 250px
-  );
-  background-repeat: no-repeat;
-}
