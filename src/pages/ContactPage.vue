@@ -1,5 +1,8 @@
 <template>
-  <section class="flex lg:ps-20 lg:pe-20 items-start justify-around gap-4 lg:py-16 ">
+  <section class="flex lg:ps-20 lg:pe-20 items-start justify-around gap-4 lg:py-16">
+    <AppRadialBackground class="absolute left-[-35%] top-[4%] lg:top-[10%] lg:left-[-10%]" />
+    <AppRadialBackground class="absolute hidden lg:flex lg:bottom-[0%] lg:right-[-10%]" />
+
     <div class="hidden lg:flex flex-col justify-start gap-4 mt-20 text-desktop-heading-3 relative">
       <img src="@assets/images/purple_star.svg" alt="star" class="absolute lg:w-[20px] lg:top-[-20%] lg:left-[10%]">
 
@@ -101,6 +104,7 @@
 
 <script setup lang="ts">
 import Chevron from "@components/icons/Chevron.vue";
+import AppRadialBackground from '@components/AppRadialBackground/index.vue'
 import { reactive, ref } from "vue";
 import { useVuelidate } from "@vuelidate/core";
 import { required, email } from "@vuelidate/validators";
