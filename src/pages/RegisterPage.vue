@@ -94,11 +94,16 @@
         <p class="text-primary-one text-[10px] italic text-center lg:text-left">
           Please review your registration details before submitting
         </p>
-        <div class="flex items-start gap-2">
-          <input type="checkbox" name="policy" id="policy" class="border border-white bg-transparent"
-            v-model="formData.privacy_policy_accepted" />
-          <label for="policy">I agreed with the event terms and conditions and privacy
-            policy</label>
+        <div class="flex items-start">
+          <label for="policy" class="flex items-start gap-2">
+            <input type="checkbox" name="policy" id="policy" v-model="formData.privacy_policy_accepted" class="hidden" />
+            <div class="w-[30px] h-[25px] border-2 border-white rounded-sm flex items-center justify-center font-bold"
+              id="checkbox">
+              <Check v-if="formData.privacy_policy_accepted" />
+            </div>
+            I agreed with the event terms and conditions and privacy
+            policy
+          </label>
         </div>
         <p class="text-sm text-primary-one" v-if="!formData.privacy_policy_accepted">
           Please check the agreement.
@@ -135,6 +140,7 @@ import { reactive, onMounted, ref } from "vue";
 import { useRouter } from 'vue-router'
 import { required, email } from "@vuelidate/validators";
 import { useVuelidate } from "@vuelidate/core";
+import Check from "@/components/icons/Check.vue";
 
 interface CategoryObj {
   id: number;
@@ -208,4 +214,9 @@ const submitRegistrationForm = async () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+#policy:checked+#checkbox {
+  border-color: transparent;
+  background-image: linear-gradient(to top, #FE34B9, #903AFF);
+}
+</style>
