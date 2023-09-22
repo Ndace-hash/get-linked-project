@@ -4,7 +4,7 @@
     <AppHero />
     <AppIntro />
     <AppRadialBackground class="absolute left-[-40%] top-[14%] scale-[60%] lg:scale-100 lg:left-[7%] lg:top-[14%]" />
-    <AppRadialBackground class="absolute right-[-55%] top-[17%] scale-[60%] lg:scale-100 lg:right-[-30%] lg:top-[17%]" />
+    <AppRadialBackground class="absolute right-[-55%] top-[17%] scale-[60%] lg:scale-100 lg:right-[-20%] lg:top-[17%]" />
     <AppRules />
     <AppRadialBackground class="absolute left-[-40%] top-[22%] scale-[60%] lg:scale-100 lg:left-[-6%] lg:top-[26%]" />
     <AppRadialBackground class="absolute right-[-50%] top-[30%] scale-[60%] lg:scale-100 lg:right-[-15%] lg:top-[30%]" />
