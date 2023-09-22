@@ -1,7 +1,10 @@
 <template>
   <section id="FAQ"
-    class="flex flex-col items-center lg:flex-row lg:px-12 py-6 border-b border-b-white border-opacity-20">
-    <div class="px-6">
+    class="flex flex-col items-center lg:items-start lg:flex-row lg:px-12 py-6 border-b border-b-white border-opacity-20">
+    <div class="px-6 pt-16 lg:scale-90 relative">
+      <img src="@assets/images/purple_star.svg" alt="star"
+        class="absolute top-[8%] left-[15%] w-[20px] lg:w-[20px] lg:top-[5%] lg:left-[0%]">
+
       <h2 class="font-clash-display text-center text-desktop-subtext lg:text-left lg:text-desktop-heading-2 w-full">
         Frequently Ask <br /><span class="text-secondary-minor">Question</span>
       </h2>
@@ -19,6 +22,12 @@
       </div>
     </div>
     <div class="relative pt-16">
+      <img src="@assets/images/purple_star.svg" alt="star" class="absolute top-[15%] right-[50%] w-[12px]  ">
+      <img src="@assets/images/purple_star.svg" alt="star" class="absolute top-[30%] left-[20%] w-[12px]  ">
+      <img src="@assets/images/gray_star.svg" alt="star" class="absolute top-[55%] left-[5%] w-[12px] lg:w-[20px]  ">
+      <img src="@assets/images/white_star.svg" alt="star"
+        class="absolute bottom-[0%] lg:bottom-[-5%] right-[20%] w-[12px] lg:w-[20px]  ">
+
       <img src="@assets/images/question_mark.svg" alt="question mark"
         class="absolute w-[30px] top-[9%] left-[35%] opacity-50" />
       <img src="@assets/images/question_mark.svg" alt="question mark"
