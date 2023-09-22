@@ -1,6 +1,8 @@
 <template>
-  <section class="flex lg:ps-20 lg:pe-20 items-start justify-around h-screen gap-4 lg:py-20">
-    <div class="hidden lg:flex flex-col justify-start gap-4 mt-20 text-desktop-heading-3">
+  <section class="flex lg:ps-20 lg:pe-20 items-start justify-around gap-4 lg:py-16 ">
+    <div class="hidden lg:flex flex-col justify-start gap-4 mt-20 text-desktop-heading-3 relative">
+      <img src="@assets/images/purple_star.svg" alt="star" class="absolute lg:w-[20px] lg:top-[-20%] lg:left-[10%]">
+
       <h1 class="text-secondary-minor text-desktop-heading-2 font-clash-display font-semibold">
         Get in touch
       </h1>
@@ -19,7 +21,15 @@
       </div>
     </div>
     <div
-      class="px-12 py-8 lg:px-20 lg:bg-white lg:bg-opacity-[3%] lg:drop-shadow-sm w-full max-w-2xl lg:scale-90 rounded-md">
+      class="px-12 py-8 lg:px-20 lg:bg-white lg:bg-opacity-[3%] lg:drop-shadow-sm w-full max-w-xl lg:scale-[85%] rounded-md relative">
+      <img src="@assets/images/purple_star.svg" alt="star" class="absolute top-[7%] left-[50%] w-[15px] lg:hidden ">
+      <img src="@assets/images/gray_star.svg" alt="star"
+        class="absolute top-[15%] right-[10%] w-[15px] lg:w-[20px] lg:top-[-10%] ">
+      <img src="@assets/images/white_star.svg" alt="star"
+        class="absolute bottom-[23%] right-[5%] w-[20px] lg:bottom-[0%] lg:right-[-10%] ">
+      <img src="@assets/images/purple_star.svg" alt="star"
+        class="absolute bottom-[15%] left-[9%] w-[15px] lg:w-[20px] lg:bottom-[18%] lg:left-[-1%] ">
+
       <button
         class="bg-gradient-to-t from-primary-one to-primary-two p-[2px] w-[30px] h-[30px] rounded-full flex items-center justify-center mt-2 mb-10 lg:hidden"
         @click="() => $router.push({ name: 'home' })">
