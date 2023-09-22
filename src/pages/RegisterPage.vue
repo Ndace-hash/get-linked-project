@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-full flex items-center relative px-12 mt-[100px] lg:mt-[90px]">
+  <section class="min-h-full flex items-center relative px-12 mt-[100px] lg:mt-[90px] mx-auto">
     <AppRadialBackground class="absolute left-[-35%] top-[4%] lg:top-[10%] lg:left-[-10%]" />
     <AppRadialBackground class="absolute hidden lg:flex lg:bottom-[-10%] lg:right-[-10%]" />
 
@@ -11,7 +11,8 @@
       <img src="@assets/images/man_sitting_at_table.svg"
         alt="An illustration of a man sitting at a table with crossed legs" />
     </div>
-    <div class="py-8 px-12 lg:bg-white lg:bg-opacity-5 lg:shadow-md md:mx-auto lg:scale-90 rounded-md relative">
+    <div
+      class="py-8 px-6 lg:px-12 lg:bg-white lg:bg-opacity-5 lg:shadow-md md:mx-auto lg:scale-90 rounded-md relative  flex flex-col items-center">
       <img src="@assets/images/purple_star.svg" alt="star" class="absolute top-[20%] right-[15%] w-[15px] lg:hidden ">
       <img src="@assets/images/gray_star.svg" alt="star"
         class="absolute top-[40%] left-[5%] w-[15px] lg:w-[20px] lg:top-[4%] lg:left-[70%]">
