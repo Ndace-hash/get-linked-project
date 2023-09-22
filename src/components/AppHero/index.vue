@@ -1,7 +1,7 @@
 <template>
   <section id="hero" class="flex flex-col items-center border-b border-b-white border-opacity-20">
     <div class="flex justify-center lg:justify-end py-4 pt-8 w-max mb-6 relative lg:self-end lg:me-16">
-      <h3 class="font-bold capitalize text-desktop-subtext">
+      <h3 class="font-bold capitalize text-desktop-subtext scale-90 lg:scale-100">
         Igniting a revolution in HR innovation
       </h3>
       <img src="@assets/underline.svg" alt="pen underlining" class="absolute bottom-1 right-1" />
