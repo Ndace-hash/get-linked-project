@@ -1,5 +1,14 @@
 <template>
-  <div class="flex flex-col lg:items-center mt-14 px-10">
+  <div class="flex flex-col lg:items-center mt-14 px-10 relative pb-4">
+    <img src="@assets/images/purple_star.svg" alt="star"
+      class="absolute -top-2 left-[20%] w-[10px] lg:w-[20px] lg:-top-[3%] lg:left-[20%]">
+    <img src="@assets/images/white_star.svg" alt="star"
+      class="absolute top-[46%] right-[20%] w-[10px] lg:w-[20px] lg:top-[37%] lg:right-[20%]">
+    <img src="@assets/images/gray_star.svg" alt="star"
+      class="absolute bottom-[-1%] left-[4%] w-[10px] lg:w-[20px] lg:bottom-[10%] lg:left-[13%]">
+
+
+
     <DesktopTimelineCard v-for="(t, index) in timeline" :key="index" :activity="t" :index="index"
       :is-last="timeline.length - 1 == index ? true : false" class="hidden lg:flex" />
 
